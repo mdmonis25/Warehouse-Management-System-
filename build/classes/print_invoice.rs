@@ -1,0 +1,2 @@
+warehouse_management.print_invoice
+warehouse_management.print_invoice$1

@@ -1,0 +1,2 @@
+warehouse_management.view_details
+warehouse_management.view_details$1

@@ -1,0 +1,70 @@
+
+// Create database
+CREATE DATABASE warehouse_management;
+
+// Create Dispatch Table
+CREATE TABLE `dispatch_table` (
+  `dispatch_id` varchar(10) NOT NULL,
+  `item_id` varchar(10) NOT NULL,
+  `item_name` varchar(50) NOT NULL,
+  `item_type` varchar(50) NOT NULL,
+  `received_info` varchar(50) NOT NULL,
+  `dispatch_date` varchar(15) NOT NULL,
+  `dispatch_add` varchar(50) NOT NULL,
+  `contact` int(15) NOT NULL,
+  PRIMARY KEY (`dispatch_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+// Create Employee Table
+CREATE TABLE `employee` (
+  `emp_id` varchar(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `join_date` varchar(20) NOT NULL,
+  `position` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `contact` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+// Create Item Table
+CREATE TABLE `item_table` (
+  `item_id` varchar(11) NOT NULL,
+  `item_name` varchar(100) NOT NULL,
+  `item_type` varchar(50) NOT NULL,
+  `received_from` varchar(100) NOT NULL,
+  `received_date` varchar(11) NOT NULL,
+  `warehouse_id` varchar(11) NOT NULL,
+  PRIMARY KEY (`item_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+// Create Item Table
+CREATE TABLE `item_table` (
+  `item_id` varchar(11) NOT NULL,
+  `item_name` varchar(100) NOT NULL,
+  `item_type` varchar(50) NOT NULL,
+  `received_from` varchar(100) NOT NULL,
+  `received_date` varchar(11) NOT NULL,
+  `warehouse_id` varchar(11) NOT NULL,
+  PRIMARY KEY (`item_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+// Create User Table
+CREATE TABLE `users` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`username`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+// Create Warehouse Management Table
+CREATE TABLE `warehousemgmt` (
+  `warehouse_id` varchar(11) NOT NULL,
+  `capacity` varchar(20) NOT NULL,
+  `utilization` varchar(10) NOT NULL,
+  `last_cleaned` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+// Insert into User Table
+INSERT INTO users VALUES ('abc','abc123');
+
+// End of SQL
